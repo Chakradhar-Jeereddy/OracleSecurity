@@ -25,13 +25,13 @@ END;
 ```
 # Connect as DV Owner User( c##dv_owner)
 ```
-connect c##dv_owner@pdb1
+connect c##dv_owner@192.168.1.12:1521/pdb1
 EXEC DBMS_MACADM.ENABLE_DV;
 ```
 # Restart the Pluggable Database 
 ```
 Alter pluggable database pdb1 close;
-Alter pluggable database open;
+Alter pluggable database pdb1 open;
 ```
 # Verify if Label Security and Database Vault are Installed & Configured
 ```
