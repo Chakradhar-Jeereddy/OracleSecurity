@@ -7,28 +7,28 @@ SELECT * FROM DBA_OLS_STATUS;
 ```
 # Create new Users for Database Vault
 ```
-GRANT CREATE SESSION, SET CONTAINER TO c##dv_owner_root IDENTIFIED BY
+GRANT CREATE SESSION, SET CONTAINER TO c##dv_owner IDENTIFIED BY
 ORacle1234## CONTAINER = ALL;
-GRANT CREATE SESSION, SET CONTAINER TO c##dv_acctmgr_root IDENTIFIED BY
+GRANT CREATE SESSION, SET CONTAINER TO c##dv_acctmgr IDENTIFIED BY
 ORacle1234## CONTAINER = ALL;
 ```
 # Configure Database Vault (Connect as root admin)
 ```
 BEGIN
 CONFIGURE_DV (
- dvowner_uname => 'c##dv_owner_root',
- dvacctmgr_uname => 'c##dv_acctmgr_root',
+ dvowner_uname => 'c##dv_owner',
+ dvacctmgr_uname => 'c##dv_acctmgr',
  force_local_dvowner => FALSE);
 END;
 /
-exec CONFIGURE_DV('c##dv_owner_root','c##dv_acctmgr_root');
+exec CONFIGURE_DV('c##dv_owner','c##dv_acctmgr');
 ```
 # Recompile Invalid Objects
 ```
 @?/rdbms/admin/utlrp.sql
 ```
 
-# Connect to root as DV Owner User( c##dv_owner_root)
+# Connect to root as DV Owner User( c##dv_owner)
 ```
 EXEC DBMS_MACADM.ENABLE_DV;
 ```
