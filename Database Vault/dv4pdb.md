@@ -18,14 +18,14 @@ select EMPLOYEE_ID,FIRST_NAME,LAST_NAME,SALARY from hr.employees ;
 ```
 BEGIN
 CONFIGURE_DV (
- dvowner_uname => 'c##dv_owner_root',
- dvacctmgr_uname => 'c##dv_acctmgr_root');
+ dvowner_uname => 'c##dv_owner',
+ dvacctmgr_uname => 'c##dv_acctmgr');
 END;
 /
 ```
-# Connect as DV Owner User( c##dv_owner_root)
+# Connect as DV Owner User( c##dv_owner)
 ```
-connect c##dv_owner_root@pdb1
+connect c##dv_owner@pdb1
 EXEC DBMS_MACADM.ENABLE_DV;
 ```
 # Restart the Pluggable Database 
