@@ -17,9 +17,13 @@ select network_service_banner from v$session_connect_info where sid in (select d
 
 ## Inspect Network trafic after enabling NNE.
 ```
+Take a new session-
 ip addr show           => list network interfaces
 tcpdump -i lo -A port 1521
 
 -i -> interface
 -A  -> ASSCI format
+
+sqlplus sys@pdb1 as sysdba
+select * from hr.employees;
 ```
