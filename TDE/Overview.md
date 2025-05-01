@@ -1,5 +1,4 @@
 # Transparent Database Encryption (TDE)
-
 ## Why TDE?
 ![oracle tde](../images/tde1.jpg)
 
