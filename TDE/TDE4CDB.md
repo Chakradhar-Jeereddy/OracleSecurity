@@ -8,7 +8,7 @@ SQL> create tablespace userstab datafile '+DATA' size 1G;
 ```
 # Perform a strings command and view the data
 ```
-Strings /opt/oracle/oradata/XE/XEPDB1/userstab01.dbf
+strings /opt/oracle/oradata/XE/XEPDB1/userstab01.dbf
 ```
 # Create an entry in sqlnet.ora file
 ```
