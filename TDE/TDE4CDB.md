@@ -1,6 +1,6 @@
 # Create a new Tablespace 
 ```
-SQL> create tablespace userstab datafile '/opt/oracle/oradata/XE/XEPDB1/userstab01.dbf' size 1G;
+SQL> create tablespace userstab datafile '+DATA' size 1G;
 ```
 # Install Sample HR Schema in this Tablespace
 ```
